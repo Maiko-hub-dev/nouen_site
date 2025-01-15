@@ -1,0 +1,11 @@
+@use "../global" as *;
+
+.section-title {
+    font-family: $base-font;
+    color: $color1;
+    font-weight: $bold;
+    font-size: 2rem;
+    line-height: 1.4375;
+    width: 8rem;
+    margin: 0 auto;
+}

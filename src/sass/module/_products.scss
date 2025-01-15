@@ -1,0 +1,76 @@
+@use "../global" as *;
+
+.products {
+    width: 100%;
+    height: 100vh;
+    background-color: $en-color;
+    max-width: 100%;
+    // padding-top: 10vh;
+    @include mq("md"){
+        padding-top: 5rem; //. レイアウト調整
+        height: 100vh;
+    }
+}
+.products__title{
+    position: relative;
+    top: 0;
+    padding: 5rem 0;
+}
+.products__title.section-title {
+    margin-top: 5rem;
+}
+
+.products__images {
+    position: relative;
+    height: inherit;
+    top: 1rem;
+    @include mq("md"){
+        height: fit-content;
+    }
+}
+
+.products__swiper .cards-swiper .swiper-slide{
+    font-size: 1rem;
+    color: $color1;
+    font-weight: $bold;
+    height: fit-content;
+    aspect-ratio: (264 /331);
+    box-shadow: rem(3) rem(6) rem(6) rgba(0 , 0 ,0, 0.16);
+}
+
+
+.products__swiper .slide__block--text{
+    line-height: 1.25;
+    letter-spacing: min(0.01em, 0.04rem);
+    @include  mq("md"){
+        line-height: 1.5;
+    }
+}
+
+
+.swiper-slide .slide__block{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    // height: min(50.15%, 165px);
+    min-height: 135px;
+    padding: 0.5rem 1rem;
+    background-color: $white;
+    aspect-ratio: (264/ 166);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.products__swiper .slide__block--span {
+    display: block;
+    position: absolute;
+    color: $color1;
+    font-size: 1rem;
+    line-height: 1.4375;
+    width: rem(124);
+    letter-spacing: 0.04em;
+    bottom: 1rem;
+}

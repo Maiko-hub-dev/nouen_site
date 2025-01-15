@@ -1,0 +1,269 @@
+@use "../global/" as *;
+
+.contact {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: $en-color;
+        margin-top: 0rem;
+        @include mq("md"){
+          top: 0rem;
+        }
+    }
+.contact__title{
+        position: relative;
+        top: 5rem;
+        text-align: center;
+        @include mq("md"){
+            padding: 1.625rem 0;
+        }
+    }
+  .section-title.contact__title{
+        width: fit-content;
+        text-align: center;
+    }
+.contact__inner {
+  padding: 6.125rem 1.5rem;
+  width: 100%;
+  min-width: 50vw;
+  background-color: $en-color;
+  @include mq("md"){
+    padding: 6.125rem  18.03975vw;
+  }
+}
+.contact__action {
+  width: 100%;
+  height: inherit;
+  margin: 0 auto;
+}
+
+.box{
+        display: flex;
+        flex-direction: column;
+        padding: 0.75rem 0;
+        justify-content: flex-start;
+        width: inherit;  
+        color: $color1;
+        @include mq("md"){
+          flex-direction: row;
+          min-width: 450px;
+        } 
+}
+
+.box__kind{
+      align-items: flex-start;
+}
+.box__first {
+  margin-top: 1rem;
+}
+
+.box .mail__name {
+    width: 40%;
+}
+.box.box__check{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.contact__name {
+  background-color: $form;
+  width: 100%;
+  border-radius: 0.3125rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem rem(5) rem(5) rem(5);
+  @include mq("md"){
+    width: 50%;
+    padding: rem(5);
+    margin-top: 0;
+  }
+}
+.contact__mail {
+  width: 100%;
+  padding: rem(5);
+  background-color: $form;
+  border-radius: 0.3125rem;
+  @include mq("md"){
+      width: 50%;
+    }
+}
+.input__label {
+  background-color: $form;
+  @include mq("md"){
+  margin-left: 3.625rem;
+  }
+}
+.flex-box__radio {
+  margin-left: 3.625rem;;
+  display: flex;
+  flex-direction: column;
+}
+// google フォーム　リハーサル
+
+.contact__form{
+  width: 100%;
+  padding: 4.75rem 2.3125rem;
+  @include mq("md"){
+    max-width: 100%;
+    }
+}
+.form-wrapper {
+  // margin-left: auto;
+  // margin-right: auto;
+        background-color: $white;
+        border-radius: 1.25rem;
+}
+.contact__form-title {
+    color: $color1;
+    text-align: center;
+    font-size: 1.125rem;
+    font-family: $base-font;
+    letter-spacing: 0.04em;
+}
+.form__line {
+  width: 12.25rem;
+  display: flex;
+  color: $color1;
+  font-weight: $bold;
+  align-items: center;
+}
+
+.form__line.form__content {
+  width: fit-content;
+}
+.form__class {
+    display: block;
+    background-color: $yellow;
+    width: rem(50);
+    font-weight: $bold;
+    padding: rem(5) rem(11);
+    border-radius: 0.625rem;
+    color: $color1;
+    font-size: rem(14);
+    margin-left: 1.125rem;
+}
+ .flex-box {
+        display: flex;
+        align-items: center;
+      }
+
+
+.flex-box__radio.box{
+      padding: 2rem 0;
+      width: 100%;
+}
+.flex-box--padding {
+  padding: rem(10) 0;
+}
+
+.flex-box--padding:first-child{
+    @include mq("md"){
+    padding: 0 0 0.625rem 0;
+}
+}
+.contact__label {
+    position: relative;
+    cursor: pointer;
+    color: $color1;
+    padding-left: rem(30);
+    z-index: 2;
+  }
+  
+  .contact__label::before,
+  .contact__label::after {
+    content: "";
+    display: block; 
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: 3;
+  }
+  
+  .contact__label::before {
+    background-color: $white;
+    border: rem(3) solid $color1;
+    border-radius: 50%;
+    width: rem(20);
+    height: 20px;
+    left: 5px;
+  }
+  
+  .contact__label::after {
+    background-color: $white;
+    border-radius: 50%;
+    border: rem(5) solid $color1;
+    opacity: 0;
+    width: rem(16);
+    height: rem(16);
+    left: rem(7);
+  }
+  input:checked +  .contact__label::before{
+      border: rem(8) solid $color1;
+
+  }
+  input:checked + .contact__label::after {
+    opacity: 1;
+  }
+  .box__textaera{
+    width: 100%;
+    display: block;
+    height: 10.625rem;
+    background-color: $form;
+    border-radius: 0.3125rem;
+    margin-top: 1.5rem;
+    @include mq("md"){
+      width: 50%;
+      margin-left: 3.625rem;
+      margin-top: 0;
+    }
+  }
+  .contact__submit {
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+  }
+  
+  
+  .contact__submit::before,
+  .contact__submit::after {
+    content: "";
+    display: block; 
+    position: absolute;
+  }
+  
+  .contact__submit::before {
+    background-color: #fff;
+    border-radius: 0%;
+    border: 1px solid #ddd;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 5px;
+  }
+  
+  .contact__submit::after {
+    border-bottom: rem(2) solid #ddd;
+    border-left: rem(2) solid #ddd;
+    opacity: 0;
+    height: 5px;
+    width: 10px;
+    transform: rotate(-45deg);
+    top: 2px;
+    left: 10px;
+  }
+
+.contact__submit{
+    display: block;
+    width: 15.1875rem;
+    margin: 0 auto;
+    background-color: $yellow;
+    border-radius: 0.625rem;
+    color: $color1;
+    font-family: $base-font;
+    font-size: rem(14);
+    letter-spacing: 0.04em;
+    padding: rem(13) 5.875rem;
+    font-weight: $bold;
+    margin-top: 1.125rem;
+}

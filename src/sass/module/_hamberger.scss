@@ -1,0 +1,156 @@
+@use "../global/" as *;
+
+$drawer-width: 25px;
+$drawer-height: 2px;
+$drawer-color: $color1;
+
+.hamberger {
+    transition: 0.3s ease;
+}
+.top__drawer.hamberger {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.hamberger .menu{
+    position: relative;
+    display: block;
+    z-index: 1001;
+    height: $drawer-height;
+    width: $drawer-width;
+    background-color: $drawer-color;
+    transition: ease 0.3s;
+}
+
+.js-hamberger.is-active {
+    transition: 0.3s ease;
+}
+
+.top__drawer {
+    position: absolute;
+    z-index: 1000;
+}
+
+.sp-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    background-color: $white;
+    width: inherit;
+    height: 100vh;
+    opacity: 0.6;
+    overflow-y: scroll;
+    transition: 0.3s ease;
+    z-index: 999;
+}
+.js-hamberger.is-active .js__drawer{
+    right: 0rem;
+    transform: translateX(0);
+}
+
+.hamberger .menu:nth-child(1){
+    top: 1rem;
+}
+.hamberger .menu:nth-child(2){
+    top: 0.5rem;
+    margin: 0.75rem 0;
+}
+
+.hamberger .menu:nth-child(3){
+    top: 0;
+}
+
+.hamberger.is-active .menu:nth-child(1){
+    top: 1.5rem;
+    transform: rotate(45deg);
+}
+
+.hamberger.is-active .menu:nth-child(2){
+    transform: translateY(-50%);
+    opacity: 0;
+}
+.hamberger.is-active .menu:nth-child(3){
+    top: -0.25rem;
+    transform: rotate(-45deg);
+}
+
+
+.sp-nav.is-active{
+    transform: translateX(0);
+    opacity: 0.8;
+}
+.sp-nav__items{
+    display: block;
+    padding-top: 8.96875rem;
+    height: 100vh;
+}
+
+.sp-nav__item{
+    display: block;
+    padding-top: 0.25rem;
+}
+
+.sp-nav__item + .sp-nav__item{
+    padding-top: 1rem;
+}
+.sp-nav__item:nth-child(n + 3){
+    padding-top: 0.875rem;
+    padding-bottom: 0.05rem;
+}
+
+
+.sp-nav__item a {
+    display: block;
+    width: 100%;
+    font-family: $base-font;
+    color: $color1;
+    padding-top: 1.25rem;
+    font-weight: $medium;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+}
+
+.sp-nav__title {
+    width: 100%;
+    height: 10.25rem;
+}
+
+
+.sp-nav__cow-img {
+    display: block;
+    position: relative;
+    border-radius: rem(77);
+    width: 9.6875rem;
+    height: 6.75rem;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    margin: rem(37) auto 0; 
+}
+
+.sp-nav__cow-img img {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    margin: 1.5rem auto 0;
+}
+
+.sp-nav__title-img {
+    position: relative;
+    display: block;
+    left: 0;
+    right: 0;
+    width: 80vw;
+    height: 26dvw;
+    object-fit: cover;
+    margin: 0 auto ;
+}
+.sp-nav__title-img  img {
+    display: block;
+    width: inherit;
+    height: inherit;
+}
+

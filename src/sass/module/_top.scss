@@ -1,0 +1,79 @@
+@use "../global" as *;
+
+.top {
+    position: relative;
+    width: 100vw;
+    height: 9.4375rem;
+    background-color: $en-color;
+    padding: 1rem 0.5rem 5rem 0.5rem;
+    z-index: 2;
+    @include mq("md"){
+        padding: 0 1rem 0.5rem 0;
+    }
+}
+.top__flex {
+    position: relative;
+    // height: inherit;
+    width: inherit;
+    justify-content: center;
+    z-index: 1;
+}
+
+.top__products {
+    @include mq("md"){
+    margin-top: 200px;}
+}
+
+
+
+.top__header--subtitle a {
+    min-width: rem(64);
+    display: block;
+}
+
+.subtitle-next {
+    text-align: center;
+}
+
+.subtitle-last {
+    text-align: center;
+}
+
+.top__desc {
+    // display: flex;
+    position: relative;
+    z-index: 3;
+    width: inherit;
+    padding: 0.75rem 0.75rem 0.75rem 11.125rem;
+    height: 100%;
+    @include mq("md"){
+        padding: 0;
+    }
+}
+
+.top__desc--box {
+    position: relative;
+    opacity: 0.9;
+    width: fit-content;
+    height: 4.75rem;
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 1.25rem;
+    padding-left: 1vw;
+    z-index: 3;
+    @include mq("md"){
+        padding-top: 8.25rem;
+        }
+}
+
+.top__drawer{
+    width: 3rem;
+    height: 3rem;
+    right: 1.25rem;
+    top: 1.25rem;
+    background-color: $yellow;
+    border-radius: 50%;
+    padding: 0 0.75rem;
+    cursor: pointer;
+}
+

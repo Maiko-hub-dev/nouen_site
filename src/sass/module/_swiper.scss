@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.swiper {
+  height: 50%;
+  min-height: 331px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: rem(20);
+  @include mq("md"){
+    grid-template-columns: repeat(4.5, 1fr);
+  }
+
+}
+
+/* スライドの動き等速 */
+.swiper-wrapper {
+  display: flex;
+  height: inherit;
+  min-width: 331px;
+  transition-timing-function: linear;
+  }
+/* 画像のサイズ調整 */
+
+  .swiper-container,
+  .swiper-slide {
+    width: 60%;
+    margin-left: 0.875rem;
+    @include mq("md"){
+      width: max(20.625%,  264px);
+     height: 331px;
+     margin-left: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-slide {
+    width: calc(50% - 10px); /* 50%幅で2段目以降に並べる */
+    margin-bottom: 10px;
+  }
+}
+  .swiper-slide img {
+    align-self: center; /* 上下の中央揃え */
+    height: max(49.85%,10.375rem);
+    max-width: 100%;
+    // width: auto;
+    aspect-ratio: (389/ 245);
+    object-fit: cover; /* IE: not support */
+  }

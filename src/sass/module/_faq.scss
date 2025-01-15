@@ -1,0 +1,189 @@
+@use "../global/" as *;
+
+.faq {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    background-color: $en-color;
+    margin-top: 0rem;
+    z-index: 3;
+}
+
+.faq__title{
+    position: relative;
+    top: 5rem;
+    text-align: center;
+    @include mq("md"){
+        padding: 5.625rem 0;
+    }
+}
+.section-title.faq__title{
+    width: fit-content;
+    text-align: center;
+}
+
+.faq__inner {
+    position: relative;
+    z-index: 0;
+    background-color: $en-color;
+    margin-top: 1.625rem;
+    width: inherit;
+    @include mq("md"){
+        padding: 0 1.625rem 5.625rem;
+    }
+}
+
+.faq__accordion {
+    width: inherit;
+    margin: 0;
+}
+
+.accordion__list{
+    position: relative;
+    width: 100%;
+    padding: 0 2rem;
+    @include mq("md"){
+        padding: 0;
+    }
+}
+.accordion__item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0.875rem;
+    @include mq("md"){
+    max-width: rem(740);
+}
+}
+
+.accordion__item:nth-child(n+2) {
+    margin-top: rem(31);
+  }
+
+  /*
+  アコーディオンの開閉ボタンの装飾。
+  position: relative;が無いと、
+  「+」「-」の位置がずれるので注意。
+*/
+.accordion__head {
+  position: relative;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: inherit;
+  height: 3.125rem;
+  padding: rem(12) 0.75rem  0.75rem 0.75rem;
+  color: $color1;
+  cursor: pointer;
+}
+.accordion__q{
+    display: block;
+    font-family: $faq-font;
+    font-size: 1.5rem;
+    font-weight: $bold;
+}
+.accordion__class-title{
+    color: $color1;
+    font-size: rem(18);
+    font-family: $base-font;
+    font-weight: $bold;
+    margin-left: 0.5rem;
+}
+.accordion__text {
+    color: $color1;
+    font-size: rem(18);
+    font-family: $base-font;
+    font-weight: $regular;
+}
+
+/*閉じた状態の矢印描画*/
+
+.accordion__menu--bar{
+    width: inherit;
+    position: relative;
+    z-index: 2;
+}
+.accordion__menu--bar::after{
+    content:"";
+    display:block;
+    width: rem(18);
+    height: rem(18);
+    border-top: $border rem(4) solid;
+    border-right: $border rem(4) solid;
+    border-top-left-radius: rem(3);
+    border-top-right-radius: rem(3);
+    border-bottom-left-radius: rem(3);
+    border-bottom-right-radius: rem(3);
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    position:absolute;
+    z-index: 3;
+    right: 0.875rem;
+    top: 0.75rem;
+    bottom: 5%;
+    margin: 0;
+}
+
+.accordion__item.active .accordion__menu--bar::after {
+  content:"";
+  display:block;
+  width: rem(18);
+  height: rem(18);
+  border-top: $border rem(4) solid;
+  border-right: $border rem(4) solid;
+  border-top-left-radius: rem(3);
+  border-top-right-radius: rem(3);
+  border-bottom-left-radius: rem(3);
+  border-bottom-right-radius: rem(3);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  right: 2%;
+  top: 1.25rem;
+  bottom: 0;
+  margin: 0;
+}
+
+
+/*
+  アコーディオンの閉じている部分の装飾。
+  height: 0; overflow: hidden;にすることで、
+  通常時は表示されないようにする。
+*/
+.accordion__body {
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    padding: 0 1.5rem;
+    background: transparent;
+    transition: all .3s ease;
+  }
+
+
+/*
+  アコーディオンが開いた際に、
+  heightを0からautoに、paddingの上下を0から10に。
+*/
+.accordion__item.active .accordion__body {
+    height: 100%;
+    padding: 1.5rem;
+  }
+
+  .faq__breakfast{
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    bottom: -5rem;
+    margin-top: 6.375rem;
+    width: 21.8125rem;
+    margin-bottom: -3.375rem;
+    @include mq("md"){
+        margin-top: 0;
+        width: 27.5625vw;
+    }
+}

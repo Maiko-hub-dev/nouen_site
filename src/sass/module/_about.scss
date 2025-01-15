@@ -1,0 +1,210 @@
+@use "../global" as *;
+
+.about {
+    position: relative;
+    padding: 4.5rem 1rem 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $en-color;
+    @include mq("md"){
+        width: 100%;
+        max-width: 100%;
+        top: 10vh;
+        display: flex;
+        height: 100%;
+        padding: 0 0rem 1rem 0;
+        flex-direction: column;
+    }
+}
+.about_inner {
+    padding: 2rem 0;
+    height: 100dvh;
+    max-width: 100%;
+    // SHowのため編集
+}
+
+.about-title {
+    color:$color-blue;
+    position: relative;
+    font-weight: $bold;
+    background-color: $white;
+    font-size: 1.5rem;
+    @include mq("md"){
+        font-size: rem(40);
+        padding: 0.5rem;
+    }
+}
+
+.top__desc--view-eat{
+    position: relative;
+    width: inherit;
+    z-index: 5;
+    // aspect-ratio: (786/ 524);
+    padding-left: 0;
+    margin-top: 2rem;
+    @include mq("md"){
+        width: inherit;
+        padding-right: 2.5rem;
+        margin-top: 0;
+        padding-left: 0;
+        border-radius: 6.375rem;
+   }
+}
+
+.top__desc--view-eat img {
+    display: block;
+    width: 700px;
+    border-radius: 3.125rem;
+    object-fit: cover;
+    margin-top: -3rem;
+    opacity: 0.6;
+    @include mq("md"){
+        width: inherit;
+        margin-top: 3rem;
+        opacity: 1;
+    }
+}
+.top__desc--detail {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    // aspect-ratio: (786/ 524);
+    z-index: 5;
+    @include mq("md"){
+        top: -6.5rem;
+        padding-right: 2.25rem;
+        width: max(500px,60dvw);
+        height: 100%;
+    }
+}
+.top__detail-desk {
+    position: relative;
+    margin: 5.75rem 1.25rem 1.25rem 0;
+    width: 80vw;
+    left: 0;
+    height: inherit;
+    z-index: 4;
+    @include mq("md"){
+        position: absolute;
+        width: inherit;
+        margin-top: 0;
+    }
+}
+
+.top__desc__descri {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: inherit;
+    opacity: 0.9;
+    z-index: 5;
+    top: 70%;
+
+    padding: 0;
+    @include mq("md"){
+        width: 100%;
+        margin-top: 2rem;
+        height: fit-content;
+        position: relative;
+        right: 0;
+        padding: 3rem 5rem 0 5rem;
+        // padding: 3rem 0 0 10vw;
+        margin-right: -11.125rem;
+    }
+}
+
+
+.about__desc {
+    color: $color1;
+    font-size: 1rem;
+}
+
+.about__desc-desc {
+    line-height: 2.125;
+    position: relative;
+    z-index: 5;
+    color: $color-brawn;
+    // letter-spacing: 0.04em;
+    background-color: $white;
+    @include mq("md"){
+        width: fit-content;
+        max-width: 50vw;
+        margin-top: 2.5rem;
+        padding: 1rem 0.75rem 0.9375rem 0.75rem;
+        line-height: 2.5;
+    }
+}
+.about__desc--line-break {
+    overflow-wrap: break-word;
+}
+.top__desc--image {
+    width: 0;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    // aspect-ratio: (393/ 250);
+    @include mq("md"){
+        margin-top: 6rem;
+        position: absolute;
+        width: inherit;
+        height: fit-content;
+        margin-left: calc(100% - 100vw);
+        transform: translateY(-50%);
+        padding: 1.5rem 2rem;
+        z-index: 4;
+    }
+}
+
+.top__desc--padding {
+    padding-left: 3vw;
+    @include mq("md"){
+    z-index: 55;
+    padding-left: 5rem;
+    }
+}
+
+.top__desc--image img {
+    position: relative;
+    display: block;
+    border-radius: 3.125rem;
+    width: 100%;
+    max-width: 25rem;
+    bottom: 0;
+    object-fit: cover;
+    @include mq("md"){
+        margin-top: min(100vh, 100%);
+        top: 0; 
+        right: 0;
+        z-index: 5;
+    }
+}
+.top__desc__flex {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    height: inherit;
+    @include mq("md"){
+        // Showのため編集
+        background-color: $white;
+        background-color: $en-color;
+        width: inherit;
+        padding: 0 2.6875rem 0 1vw;
+        height: fit-content;
+    }
+}
+
+.top__demon {
+    display: flex;
+    position: relative;
+    background-color: $en-color;
+    width: initial;
+    flex-direction: column;
+    height: 100vw;
+    @include mq("md"){
+        height:auto;
+        flex-direction: row;
+        justify-content: space-between;
+        height: fit-content;
+    }
+}

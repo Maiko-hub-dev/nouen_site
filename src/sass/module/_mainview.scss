@@ -1,0 +1,238 @@
+@use "../global" as *;
+
+.mainview {
+    width: 100vw;
+    height: calc(100vh);
+    max-width: 100%;
+    @include mq("md"){
+        height: calc(100vh + 2rem);
+    }
+}
+
+.mainview-title{
+    height: 0;
+    text-indent: -100000em;
+}
+.mainview__title{
+    position: absolute;
+    height: inherit;
+    @include mq("md"){
+        width: 14.25rem;
+        height: fit-content;
+        top: 7rem;
+        right: 9.125rem;
+    }
+}
+.mainview__str {
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.mainview__flex {
+    background-color: $en-color;
+    position: relative;
+    height: fit-content;
+    width: inherit;
+    max-width: 100%;
+    justify-content: center;
+    top: 0;
+    z-index: 4;
+}
+.mainview__flex {
+    @include mq("md"){
+        height: 9.0625rem;
+    }
+}
+.mainview__logo {
+    display: block;
+    position: absolute;
+    background-color: $en-color;
+    border-radius: rem(77);
+    width: 9.625rem;
+    height: 9.625rem;
+    top: -4.8125rem;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    z-index: 1; 
+}
+.mainview__logo .top__logo--title {
+    position: absolute;
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    margin: rem(29) ;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.mainview__container {
+        position: relative;
+        width: 100vw;
+        max-width: 100%;
+        height: inherit;
+        transition: opacity 3s ease-out;
+        z-index: 3;
+}
+
+
+.mainview__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        height: inherit;
+        width: inherit;
+        max-width: 100%;
+    }
+
+
+.mainview__overlay img{
+        text-align: center;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: inherit;
+        object-fit: cover;
+        object-position: center;
+        @include mq("md"){
+            object-position: initial;
+        }
+}
+.mainview__container.open{
+    opacity: 1;
+}
+
+.mainview__anime{
+    width: 100vw;
+    max-width: 100%;
+    height: inherit;
+}
+
+
+.mainview__flex--inner {
+    width: 100%;
+    height: 0;
+    background-color: transparent;
+    @include mq("md"){
+        height: 9.0625rem;
+    }
+}
+
+
+.mainview__header {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.mainview__header--lists {
+    position: relative;
+    width: 100vw;
+    display: none;
+    height: rem(100);
+    justify-content: space-between;
+    margin: 4.25rem auto 0 auto;
+    z-index: 4;
+    @include mq("md"){
+        display: flex;
+        top: -6rem;
+        height: 6.0625rem;
+        margin:  0;
+        padding: 0 0.25rem;
+    }
+    @include mq("lg"){
+        justify-content: space-evenly;
+        padding: 0 1.125rem;
+    }
+}
+
+
+.mainview__flex .top__logo-title {
+    position: relative;
+    display: block;
+    top: 3.25rem;
+    left: 0;
+    right: 0;
+    width: min(300px, 20%);
+    height: rem(100);
+    margin: 0 auto;
+    object-fit: contain;
+    @include mq("md"){
+        width: min(250px, 24%);
+    }
+}
+
+.mainview__header-list{
+    width: fit-content;
+    min-width: none;
+    color: $color1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    @include mq("md"){
+        // width: min(336px,28%);
+    }
+    @include mq("lg"){
+        // width: min(500px, 35%);
+    }
+}
+.mainview__header-list.header__list1 {
+    padding: 0 0 0 2rem;
+    margin-left: 0;
+    @include mq("md"){
+        margin-right: 1rem;
+        min-width: 20.75rem;
+    }
+    @include mq("lg"){
+        margin-right: 4rem;
+    }
+}
+.mainview__header-list.header__list2 {
+    margin-right: 0;
+        @include mq("md"){
+            padding: 0 0.75rem;
+            justify-content: space-evenly;
+            text-align: left;
+            min-width: 20.75rem;
+    }
+    @include mq("lg"){
+        margin-left: 4rem;
+    }
+}
+.mainview__header--subtitle{
+    display: inline-block;
+    width: auto;
+    min-width: rem(72);
+    font-size: 1rem;
+    font-family: $base-font;
+    color: $color1;
+    font-weight: $medium;
+    letter-spacing: 0.04em;
+    @include mq("md"){
+        margin-left: 1.125rem;
+        padding: 0 0.125rem 0 0;
+    }
+}
+
+.mainview__header--subtitle a {
+    min-width: rem(64);
+    display: block;
+}
+
+.subtitle-next {
+    text-align: center;
+}
+
+.subtitle-last {
+    text-align: center;
+}

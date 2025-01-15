@@ -1,0 +1,107 @@
+@use "../global/" as *;
+
+.access {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+    margin-top: 0rem;
+   
+}
+
+.access__title{
+    position: relative;
+    top: 5rem;
+    text-align: center;
+    @include mq("md"){
+        padding: 5.6875rem 0;
+    }
+}
+.section-title.access__title{
+    width: fit-content;
+    text-align: center;
+}
+
+.access__inner {
+    position: relative;
+    padding: 5.625rem 3.125rem;
+    @include mq("md"){
+        padding: 0 13.5125dvw 5.625rem;
+        margin-top: 2.625rem;
+        z-index: 1;
+    }
+}
+.access__contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin: 0 auto;
+    @include mq("md"){
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.access__content {
+    width: inherit;
+    @include mq("md"){
+        width: 49.1%;
+    }
+}
+.access__map {
+    width: inherit;
+    @include mq("md"){
+        width: 47.4%;
+        padding-left: 2rem;
+    }
+}
+.access__mapping {
+    display: block;
+    width: 100%;
+}
+
+.company__contents {
+    display: flex;
+    justify-content: start;
+    color: $color1;
+    font-family: $base-font;
+    font-size: 1.125rem;
+    font-weight: $bold;
+    border-bottom: solid rem(1) $border;
+    padding: 1.3125rem 0;
+    letter-spacing: 0.04em;
+}
+
+.company__content{
+    width: 100%;
+    max-width: 5.5rem;
+}
+
+.company__contents:first-child {
+    border-top: solid rem(1) $border;
+}
+
+.company__class {
+    @include mq("md"){
+    margin-left: 6.375rem;
+    }
+}
+
+.access__Brussels{
+    position: absolute;
+    right: 0;
+    z-index: 3;
+    bottom: -5rem;
+    margin-top: 6rem;
+    width: 14.6875rem;
+    object-fit: cover;
+    @include mq("md"){
+        // margin-bottom: 3.375rem;
+    }
+}
+
+.access__Brussels img {
+    display: block;
+    width: 16.5rem;
+}
